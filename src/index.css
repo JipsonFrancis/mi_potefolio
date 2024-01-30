@@ -23,7 +23,7 @@ body {
 
 .article-wrapper {
     margin: 1rem;
-    width: 250px;
+    max-width: 300px;
     -webkit-transition: 0.15s all ease-in-out;
     transition: 0.15s all ease-in-out;
     border-radius: 10px;
