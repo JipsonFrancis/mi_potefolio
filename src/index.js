@@ -7,10 +7,10 @@ import './index.css'
 function App()
 {
     return (
-        <>
+        <div className="row">
             <Project />
             <Project />
-        </>
+        </div>
     )
 }
 
