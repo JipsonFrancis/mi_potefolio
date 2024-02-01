@@ -27,13 +27,28 @@ function Project(props)
                     </div>
                 </div>
                 <div className="types">
-                    <span style={props.styling} className="project-type">• {props.tech[0]}</span>
-                    <span className="project-type">• {props.tech[1]}</span>
-                    <span className="project-type">• {props.tech[2]}</span>
+
+                    {
+                        props.tech.map((x,i) => {
+                            if (i % 2 === 0)
+                            {
+                                return <Badge name={x} stying={{}}/>
+                            }
+                            else
+                            {
+                                return <Badge name={x} stying={props.styling}/>
+                            }
+                        })
+                    }
                 </div>
             </div>
         </article>
     )
+}
+
+function Badge (props)
+{
+    return <span className="project-type" style={props.stying}>• {props.name}</span>
 }
 
 
